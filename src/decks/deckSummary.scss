@@ -1,0 +1,8 @@
+div.deck-summary {
+    div.ant-typography {
+        margin: 0;
+        &.last-updated {
+            font-size: 0.85em;
+        }
+    }
+}
