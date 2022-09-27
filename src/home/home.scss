@@ -1,0 +1,35 @@
+@import '../decks/manaColors.scss';
+
+@font-face {
+  font-family: Merienda;
+  src: url(../../public/Merienda/Merienda-Regular.ttf);
+}
+
+h1, h2, h3 {
+    font-family: Merienda, Georgia, 'Times New Roman', Times, serif;
+}
+
+header.ant-layout-header {
+    height: 450px;
+    background: url('../../public/img/voyager-title-magic-gathering.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: center;
+    a {
+        float: right;
+        color: #fff;
+    }
+}
+footer.ant-layout-footer {
+    background-color: #333;
+    i.ms {
+        &.ms-u { color: $blue; }
+        &.ms-b { color: $black; }
+        &.ms-r { color: $red; }
+        &.ms-w { color: $white; }
+        &.ms-g { color: $green; }
+    }
+    .ant-typography, small {
+        color: #ccc;
+    }
+}
