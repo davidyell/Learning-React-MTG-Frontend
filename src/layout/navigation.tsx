@@ -15,6 +15,7 @@ const Navigation = () => {
       theme="dark"
       mode="horizontal"
       activeKey={activeKey()}
+      selectedKeys={[activeKey()]}
       items={[
         { key: 'home', label: 'Home', onClick: () => navigate('/') },
         { key: 'decks', label: 'Decks', onClick: () => navigate('/decks') },
