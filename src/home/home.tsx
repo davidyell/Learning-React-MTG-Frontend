@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography, Col, Row } from 'antd'
-import LatestDecks from '../decks/latestDecks'
+import LatestDecks from '../decks/components/latestDecks'
 import ContentBlock from './contentBlock'
 
 import 'antd/dist/antd.css'

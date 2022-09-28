@@ -4,6 +4,7 @@ import {
   RouterProvider,
 } from "react-router-dom"
 import Home from './home/home'
+import AllDecks from './decks/allDecks'
 import ViewDeck from './decks/viewDeck'
 import Error from './error'
 import { loader as ViewDeckLoader } from './routes/viewDeck.loader'
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
         id: 'home'
+      },
+      {
+        path: "/decks",
+        element: <AllDecks />,
+        id: 'all-decks'
       },
       {
         path: "/deck/:deckId",
