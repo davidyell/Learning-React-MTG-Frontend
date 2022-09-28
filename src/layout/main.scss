@@ -11,13 +11,17 @@ h1, h2, h3 {
 
 header.ant-layout-header {
     height: 450px;
-    background: url('../../public/img/voyager-title-magic-gathering.jpeg');
+    padding: 0;
+    background: url('../../public/img/EN_Kamigawa_Header.jpeg');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position-y: center;
-    a {
-        float: right;
-        color: #fff;
+    div.logo {
+        float: left;
+        padding: 0 20px;
+        color: #ccc;
+        background-color: #001529;
+        font-family: Merienda, Georgia, 'Times New Roman', Times, serif;
     }
 }
 footer.ant-layout-footer {

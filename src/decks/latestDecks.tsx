@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Typography } from 'antd'
 import Axios from 'axios'
-import type { DeckListItem } from '../types/decks.type'
+import type { DeckList, DeckListItem } from '../types/decks.type'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import DeckSummary from './deckSummary'
@@ -12,13 +12,17 @@ const { Title } = Typography;
 const LatestDecks = () => {
   const [decks, setDecks] = useState([] as DeckListItem[]);
 
-  useEffect(() => {
+  const getDecks = async () => {
     const url = 'http://localhost:3001/api/decks';
 
-    Axios.get<{ data: DeckListItem[] }>(url)
+    Axios.get<DeckList>(url)
       .then((response) => {
         setDecks(response.data.data)
       });
+  }
+
+  useEffect(() => {
+    getDecks();
   }, []);
 
   const recentDecks = decks.map((deckItem: DeckListItem) => {

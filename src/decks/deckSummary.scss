@@ -1,6 +1,8 @@
 div.deck-summary {
-    div.ant-typography {
+    h4 {
         margin: 0;
+    }
+    div.ant-typography {
         &.last-updated {
             font-size: 0.85em;
         }
