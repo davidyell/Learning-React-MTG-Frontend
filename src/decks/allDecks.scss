@@ -1,0 +1,10 @@
+div.all-decks {
+    .ant-card {
+        width: 300px;
+        margin: 0 15px 15px 0;
+        float: left;
+        .last-updated {
+            margin: 8px 0 0 0;
+        }
+    }
+}

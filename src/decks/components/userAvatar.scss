@@ -1,0 +1,13 @@
+@import './manaColors.scss';
+
+div.deck-summary-card {
+    .ant-card-head {
+        .ant-avatar {
+            &.white { background-color: $white; color: #000 }
+            &.green { background-color: $green; }
+            &.blue { background-color: $blue; }
+            &.red { background-color: $red; }
+            &.black { background-color: $black; }
+        }
+    }
+}

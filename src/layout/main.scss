@@ -1,0 +1,39 @@
+@import '../decks/components/manaColors.scss';
+
+@font-face {
+  font-family: Merienda;
+  src: url(../../public/Merienda/Merienda-Regular.ttf);
+}
+
+h1, h2, h3 {
+    font-family: Merienda, Georgia, 'Times New Roman', Times, serif;
+}
+
+header.ant-layout-header {
+    height: 450px;
+    padding: 0;
+    background: url('../../public/img/EN_Kamigawa_Header.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: center;
+    div.logo {
+        float: left;
+        padding: 0 20px;
+        color: #ccc;
+        background-color: #001529;
+        font-family: Merienda, Georgia, 'Times New Roman', Times, serif;
+    }
+}
+footer.ant-layout-footer {
+    background-color: #333;
+    i.ms {
+        &.ms-u { color: $blue; }
+        &.ms-b { color: $black; }
+        &.ms-r { color: $red; }
+        &.ms-w { color: $white; }
+        &.ms-g { color: $green; }
+    }
+    .ant-typography, small {
+        color: #ccc;
+    }
+}
