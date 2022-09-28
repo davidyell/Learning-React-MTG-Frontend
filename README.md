@@ -21,6 +21,6 @@ https://github.com/davidyell/Learning-Express-MTG-Api
 
 :zap: [Typescript](https://www.typescriptlang.org/)  
 
-:mortar_board: [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+:mortar_board: [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
 
 :partying_face: [React documentation](https://reactjs.org/)
