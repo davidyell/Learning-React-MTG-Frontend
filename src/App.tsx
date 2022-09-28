@@ -17,11 +17,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
+        id: 'home'
       },
       {
         path: "/deck/:deckId",
         element: <ViewDeck />,
+        id: 'view-deck',
         errorElement: <Error />,
         loader: ViewDeckLoader
       }
