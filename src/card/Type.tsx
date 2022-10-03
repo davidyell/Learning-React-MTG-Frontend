@@ -1,7 +1,7 @@
 import Set from './Set'
 
 const Type = () => {
-  return <span>Legendary Creature - Shark Bird <Set></Set></span>
+  return <div className="card-type">Legendary Creature - Shark Bird <Set></Set></div>
 }
 
 export default Type;

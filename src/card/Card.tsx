@@ -4,8 +4,10 @@ import Type from './Type'
 import Body from './Body'
 import Stats from './Stats'
 
+import './card.scss'
+
 const Card = () => {
-  return <div id="card-0001">
+  return <div id="card-0001" className='mtg-card green'>
     <Title></Title>
     <Image></Image>
     <Type></Type>

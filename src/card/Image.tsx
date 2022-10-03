@@ -1,4 +1,6 @@
 const Image = () => {
-  return <img src="https://placekitten.com/300/250" alt="Kitten" />
+  return <div className='card-image'>
+    <img src="https://placekitten.com/300/250" alt="Kitten" />
+  </div>
 }
 export default Image;

@@ -1,0 +1,69 @@
+@use "sass:color";
+@import '../decks/components/manaColors.scss';
+
+div.mtg-card {
+    width: 350px;
+    height: 500px;
+    border-radius: 8px;
+    border: 10px solid black;
+    &.green {
+        background-color: color.change($green, $lightness: 40%);
+        .card-title, .card-type, .card-image img, .card-body {
+            background-color: color.change($green, $lightness: 80%, $saturation: 10%);
+            border: 2px solid $green;
+        }
+    }
+    &.white {
+        background-color: color.change($white, $lightness: 40%);
+        .card-title, .card-type, .card-image img, .card-body {
+            background-color: color.change($white, $lightness: 80%, $saturation: 10%);
+            border: 2px solid $white;
+        }
+    }
+    &.blue {
+        background-color: color.change($blue, $lightness: 40%);
+        .card-title, .card-type, .card-image img, .card-body {
+            background-color: color.change($blue, $lightness: 80%, $saturation: 10%);
+            border: 2px solid $blue;
+        }
+    }
+    &.red {
+        background-color: color.change($red, $lightness: 40%);
+        .card-title, .card-type, .card-image img, .card-body {
+            background-color: color.change($red, $lightness: 80%, $saturation: 10%);
+            border: 2px solid $red;
+        }
+    }
+    &.black {
+        background-color: color.change($black, $lightness: 40%);
+        .card-title, .card-type, .card-image img, .card-body {
+            background-color: color.change($black, $lightness: 80%, $saturation: 10%);
+            border: 2px solid $black;
+        }
+    }
+    .card-title, .card-type {
+        margin: 4px 10px;
+        padding: 2px 5px;
+        border-radius: 5px;
+    }
+    .mana-cost, .card-set {
+        float: right;
+    }
+    .card-image {
+        display: flex;
+        justify-content: center;
+    }
+    .card-body {
+        width: 300px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    .card-stats {
+        float: right;
+        padding: 3px 8px;
+        margin-top: -12px;
+        background-color: lightgrey;
+        border: 3px solid color.change(lightgrey, $blackness: 60%);
+        border-radius: 5px;
+    }
+}

@@ -1,7 +1,7 @@
-import 'keyrune/css/mana.min.css'
+import 'keyrune/css/keyrune.min.css'
 
 const Set = () => {
-  return <i className="ss ss-c20"></i>
+  return <span className='card-set'><i className="ss ss-c20"></i></span>
 }
 
 export default Set;

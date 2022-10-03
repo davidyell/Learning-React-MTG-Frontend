@@ -2,7 +2,7 @@ import ManaCost from './ManaCost'
 
 const Title = () => {
   return (
-    <span>Shabraz, the Skyshark <ManaCost></ManaCost></span>
+    <div className='card-title'>Shabraz, the Skyshark <ManaCost></ManaCost></div>
   )
 }
 
