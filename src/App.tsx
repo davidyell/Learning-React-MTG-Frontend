@@ -5,10 +5,10 @@ import {
 } from "react-router-dom"
 import Home from './home/Home'
 import AllDecks from './decks/AllDecks'
-import ViewDeck from './decks/viewDeck'
+import ViewDeck from './decks/ViewDeck'
 import ErrorPage from './ErrorPage'
 import { loader as ViewDeckLoader } from './routes/viewDeck.loader'
-import MainLayout from './layout/main'
+import MainLayout from './layout/Main'
 
 const router = createBrowserRouter([
   {
