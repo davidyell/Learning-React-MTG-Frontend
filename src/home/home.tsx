@@ -1,7 +1,6 @@
-import React from 'react'
 import { Typography, Col, Row } from 'antd'
-import LatestDecks from '../decks/components/latestDecks'
-import ContentBlock from './contentBlock'
+import LatestDecks from '../decks/components/LatestDecks'
+import ContentBlock from './ContentBlock'
 
 import 'antd/dist/antd.css'
 import 'mana-font/css/mana.min.css'
