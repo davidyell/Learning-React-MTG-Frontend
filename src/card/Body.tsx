@@ -1,12 +1,27 @@
 import { Typography } from 'antd'
+import reactStringReplace from 'react-string-replace'
 
 const { Paragraph } = Typography
 
-const Body = () => {
+type Props = {
+  text: string;
+  flavorName: string;
+  flavorText: string;
+}
+
+const Body = (props: Props) => {
+  let bodyText
+
+  bodyText = reactStringReplace(props.text, '{T}', (match, i) => (
+    <i className="ms ms-tap"></i>
+  ))
+  bodyText = reactStringReplace(bodyText, /{([\d\w])}/gm, (match, i) => (
+    <i className={`ms ms-cost ms-${match.toLowerCase()}`}></i>
+  ))
+
   return <div className="card-body">
-    <Paragraph><i className="ms ms-tap"></i>: Add <i className="ms ms-cost ms-g"></i></Paragraph>
-    <hr />
-    <Paragraph italic={true}>As patient and generous as life, as hard and merciless as nature.</Paragraph>
+    <p>{bodyText}</p>
+    {props.flavorText && <><hr /><Paragraph italic={true}>{props.flavorText}</Paragraph></>}
   </div>
 }
 

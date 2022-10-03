@@ -4,8 +4,10 @@
 div.mtg-card {
     width: 350px;
     height: 500px;
+    margin: 10px;
     border-radius: 8px;
     border: 10px solid black;
+    box-shadow: 2px 3px 5px rgb(0 0 0 / 30%);
     &.green {
         background-color: color.change($green, $lightness: 40%);
         .card-title, .card-type, .card-image img, .card-body {
@@ -41,6 +43,23 @@ div.mtg-card {
             border: 2px solid $black;
         }
     }
+    &.artifact {
+        background-color: color.change($artifact, $lightness: 40%);
+        .card-title, .card-type, .card-image img, .card-body {
+            background-color: color.change($artifact, $lightness: 80%, $saturation: 10%);
+            border: 2px solid $artifact;
+        }
+    }
+    &.red-blue {
+        background: linear-gradient(45deg, rgba(181,22,27,1) 0%, rgba(25,83,135,1) 100%);
+        .card-title, .card-type, .card-image img, .card-body {
+            background-color: color.change($artifact, $lightness: 80%, $saturation: 10%);
+            border: 2px solid $artifact;
+        }
+        .card-body {
+            background: linear-gradient(90deg, rgba(181,22,27,1) 0%, rgba(25,83,135,1) 100%);
+        }
+    }
     .card-title, .card-type {
         margin: 4px 10px;
         padding: 2px 5px;
@@ -49,19 +68,37 @@ div.mtg-card {
     .mana-cost, .card-set {
         float: right;
     }
+    .card-set {
+        i.ss {
+            font-size: 1.8em;
+        }
+        &.uncommon {
+            color: rgb(117, 117, 117);
+        }
+        &.rare {
+            color: rgb(223, 168, 28);
+        }
+        &.mythic {
+            color: rgb(255, 145, 0)
+        }
+    }
     .card-image {
         display: flex;
         justify-content: center;
     }
     .card-body {
         width: 300px;
+        height: 140px;
         margin: 0 auto;
         padding: 10px;
+        font-size: 0.8em;
     }
     .card-stats {
+        position: relative;
+        top: -28px;
+        right: 4px;
         float: right;
         padding: 3px 8px;
-        margin-top: -12px;
         background-color: lightgrey;
         border: 3px solid color.change(lightgrey, $blackness: 60%);
         border-radius: 5px;

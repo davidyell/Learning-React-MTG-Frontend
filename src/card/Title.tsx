@@ -1,8 +1,13 @@
 import ManaCost from './ManaCost'
 
-const Title = () => {
+type Props = {
+  title: string;
+  manaCost: string;
+}
+
+const Title = (props: Props) => {
   return (
-    <div className='card-title'>Shabraz, the Skyshark <ManaCost></ManaCost></div>
+    <div className='card-title'>{props.title} <ManaCost manaCost={props.manaCost}></ManaCost></div>
   )
 }
 

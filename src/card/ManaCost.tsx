@@ -1,8 +1,18 @@
 import 'mana-font/css/mana.min.css'
 
-const ManaCost = () => {
+type Props = {
+  manaCost: string;
+}
+
+const ManaCost = (props: Props) => {
+  let symbols;
+  if (props.manaCost) {
+    const cleanCost = props.manaCost.replace(/[{}]+/g, '').split('');
+    symbols = cleanCost.map((symbol) => <i className={`ms ms-cost ms-${symbol.toLowerCase()}`}></i>)
+  }
+
   return (
-    <span className="mana-cost"><i className="ms ms-cost ms-3"></i><i className="ms ms-cost ms-u"></i><i className="ms ms-cost ms-w"></i></span>
+    <span className="mana-cost">{symbols}</span>
   )
 }
 

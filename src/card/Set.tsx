@@ -1,7 +1,14 @@
 import 'keyrune/css/keyrune.min.css'
 
-const Set = () => {
-  return <span className='card-set'><i className="ss ss-c20"></i></span>
+type Props = {
+  set: string;
+  rarity: string;
+}
+
+const Set = (props: Props) => {
+  return <span className={`card-set ${props.rarity}`}>
+    <i className={`ss ss-${props.set.toLowerCase()}`}></i>
+  </span>
 }
 
 export default Set;
