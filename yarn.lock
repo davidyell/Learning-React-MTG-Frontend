@@ -8303,6 +8303,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"keyrune@npm:^3.10.0":
+  version: 3.10.0
+  resolution: "keyrune@npm:3.10.0"
+  checksum: 1dfa809c561d9a6f197005b471757fe96d6c3e90940202af608dfa3cacc5f3e91f10e41530aff171054c0a47b043a90b15ad9b0cb24180378c1a5176151b5deb
+  languageName: node
+  linkType: hard
+
 "kind-of@npm:^6.0.2":
   version: 6.0.3
   resolution: "kind-of@npm:6.0.3"
@@ -8356,6 +8363,7 @@ __metadata:
     antd: ^4.23.2
     axios: ^0.27.2
     dayjs: ^1.11.5
+    keyrune: ^3.10.0
     mana-font: ^1.14.0
     react: ^18.2.0
     react-dom: ^18.2.0
