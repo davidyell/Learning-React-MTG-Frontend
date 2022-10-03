@@ -1,4 +1,3 @@
-import React from 'react'
 import { useLoaderData } from 'react-router-dom';
 import type { ViewDeck as ViewDeckType } from '../types/decks.type';
 

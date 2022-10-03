@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Button, Typography } from 'antd'
 import type { DeckListItem } from '../../types/decks.type'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
-import DeckSummaryRow from './deckSummary.latest'
+import DeckSummaryRow from './DeckSummary.latest'
 import { CaretRightOutlined } from '@ant-design/icons'
 import { getAllDecks } from '../finders/deck.finders'
 

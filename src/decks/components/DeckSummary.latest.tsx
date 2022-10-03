@@ -3,7 +3,7 @@ import { Typography } from 'antd'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import { Link } from 'react-router-dom'
-import DeckLastUpdated from './lastUpdated'
+import DeckLastUpdated from './LastUpdated'
 import './deckSummary.latest.scss'
 
 dayjs.extend(relativeTime);

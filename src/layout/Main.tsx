@@ -1,7 +1,7 @@
 import { Layout } from 'antd'
-import MainFooter from './footer'
+import MainFooter from './Footer'
 import { Outlet } from 'react-router-dom'
-import Navigation from './navigation'
+import Navigation from './Navigation'
 
 import 'antd/dist/antd.css'
 import 'mana-font/css/mana.min.css'
