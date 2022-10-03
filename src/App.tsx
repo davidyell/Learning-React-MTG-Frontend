@@ -3,18 +3,18 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom"
-import Home from './home/home'
-import AllDecks from './decks/allDecks'
-import ViewDeck from './decks/viewDeck'
-import Error from './error'
+import Home from './home/Home'
+import AllDecks from './decks/AllDecks'
+import ViewDeck from './decks/ViewDeck'
+import ErrorPage from './ErrorPage'
 import { loader as ViewDeckLoader } from './routes/viewDeck.loader'
-import MainLayout from './layout/main'
+import MainLayout from './layout/Main'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
-    errorElement: <Error />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         path: "/deck/:deckId",
         element: <ViewDeck />,
         id: 'view-deck',
-        errorElement: <Error />,
+        errorElement: <ErrorPage />,
         loader: ViewDeckLoader
       }
     ]

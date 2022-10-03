@@ -14,13 +14,12 @@ const UserAvatar = (props: Props) => {
   const playerName = props.player.first_name + ' ' + props.player.last_name
 
   let playerFace;
-  // if (playerAvatarImage !== null) {
-  // TODO: Must be implemented in the api back-end
-  // playerFace = <Avatar size='small' src={'http://localhost:3001/user-avatars/' + props.player.avatar}  alt={playerName}/>
-  // } else {
-  const color = colors[Math.floor(Math.random() * colors.length)];
-  playerFace = <Avatar size='small' className={color}>{playerName.charAt(0)}</Avatar>
-  // }
+  if (playerAvatarImage !== null) {
+    playerFace = <Avatar size='small' src={'http://localhost:3001/user-avatars/' + props.player.avatar} alt={playerName} />
+  } else {
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    playerFace = <Avatar size='small' className={color}>{playerName.charAt(0)}</Avatar>
+  }
 
   return playerFace
 }

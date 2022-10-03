@@ -1,8 +1,8 @@
 import type { DeckListItem } from '../../types/decks.type'
 import { Card, Typography, Button } from 'antd'
-import DeckLastUpdated from './lastUpdated'
+import DeckLastUpdated from './LastUpdated'
 import { Link } from 'react-router-dom'
-import UserAvatar from './userAvatar'
+import UserAvatar from './UserAvatar'
 
 const { Paragraph } = Typography
 

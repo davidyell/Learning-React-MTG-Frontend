@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { DeckListItem } from '../types/decks.type'
 import { getAllDecks } from './finders/deck.finders'
-import DeckSummaryCard from './components/deckSummary.card'
+import DeckSummaryCard from './components/DeckSummary.card'
 
 import './allDecks.scss'
 
