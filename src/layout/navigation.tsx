@@ -4,7 +4,6 @@ import { Menu } from 'antd'
 const Navigation = () => {
   const navigate = useNavigate()
   const location = useLocation()
-  console.log(location)
 
   const activeKey = (): string => {
     return location.pathname.includes('deck') ? 'decks' : 'home'

@@ -13,10 +13,10 @@ const Body = (props: Props) => {
   let bodyText
 
   bodyText = reactStringReplace(props.text, '{T}', (match, i) => (
-    <i className="ms ms-tap"></i>
+    <i className="ms ms-tap" key={Math.random()}></i>
   ))
   bodyText = reactStringReplace(bodyText, /{([\d\w])}/gm, (match, i) => (
-    <i className={`ms ms-cost ms-${match.toLowerCase()}`}></i>
+    <i className={`ms ms-cost ms-${match.toLowerCase()}`} key={Math.random()}></i>
   ))
 
   return <div className="card-body">

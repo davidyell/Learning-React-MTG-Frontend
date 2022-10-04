@@ -8,7 +8,7 @@ const ManaCost = (props: Props) => {
   let symbols;
   if (props.manaCost) {
     const cleanCost = props.manaCost.replace(/[{}]+/g, '').split('');
-    symbols = cleanCost.map((symbol) => <i className={`ms ms-cost ms-${symbol.toLowerCase()}`}></i>)
+    symbols = cleanCost.map((symbol, i) => <i className={`ms ms-cost ms-${symbol.toLowerCase()}`} key={i}></i>)
   }
 
   return (
