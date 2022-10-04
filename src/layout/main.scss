@@ -5,6 +5,10 @@
   src: url(../../public/Merienda/Merienda-Regular.ttf);
 }
 
+html, body {
+    background-color: #ccc;
+}
+
 h1, h2, h3 {
     font-family: Merienda, Georgia, 'Times New Roman', Times, serif;
 }

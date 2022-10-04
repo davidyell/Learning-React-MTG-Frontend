@@ -1,0 +1,137 @@
+@use "sass:color";
+@import '../decks/components/manaColors.scss';
+
+$cardBgLightness: 40%;
+$cardUiLightness: 80%;
+$cardUiSaturation: 10%;
+
+$greenBg: color.change($green, $lightness: $cardBgLightness);
+$whiteBg: color.change($white, $lightness: 75%);
+$blueBg: color.change($blue, $lightness: $cardBgLightness);
+$redBg: color.change($red, $lightness: $cardBgLightness);
+$blackBg: color.change($black, $lightness: $cardBgLightness);
+$artifactBg: color.change($artifact, $lightness: $cardBgLightness);
+
+div.mtg-card {
+    width: 350px;
+    height: 500px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 10px solid black;
+    box-shadow: 2px 3px 5px rgb(0 0 0 / 30%);
+    &.green {
+        background-color: $greenBg;
+        .card-title, .card-type, .card-image img, .card-body {
+            background-color: color.change($green, $lightness: $cardUiLightness, $saturation: $cardUiSaturation);
+            border: 2px solid $green;
+        }
+    }
+    &.white {
+        background-color: $whiteBg;
+        .card-title, .card-type, .card-image img, .card-body {
+            background-color: color.change($white, $lightness: $cardUiLightness, $saturation: $cardUiSaturation);
+            border: 2px solid $white;
+        }
+    }
+    &.blue {
+        background-color: $blueBg;
+        .card-title, .card-type, .card-image img, .card-body {
+            background-color: color.change($blue, $lightness: $cardUiLightness, $saturation: $cardUiSaturation);
+            border: 2px solid $blue;
+        }
+    }
+    &.red {
+        background-color: $redBg;
+        .card-title, .card-type, .card-image img, .card-body {
+            background-color: color.change($red, $lightness: $cardUiLightness, $saturation: $cardUiSaturation);
+            border: 2px solid $red;
+        }
+    }
+    &.black {
+        background-color: $blackBg;
+        .card-title, .card-type, .card-image img, .card-body {
+            background-color: color.change($black, $lightness: $cardUiLightness, $saturation: $cardUiSaturation);
+            border: 2px solid $black;
+        }
+    }
+    &.artifact {
+        background-color: $artifactBg;
+        .card-title, .card-type, .card-image img, .card-body {
+            background-color: color.change($artifact, $lightness: $cardUiLightness, $saturation: $cardUiSaturation);
+            border: 2px solid $artifact;
+        }
+    }
+    &.red-blue, &.red-green, &.red-white, &.red-black,
+    &.blue-red, &.blue-green, &.blue-white, &.blue-black,
+    &.white-blue, &.white-red, &.white-black, &.white-green,
+    &.black-white, &.black-blue, &.black-green, &.black-red,
+    &.green-white, &.green-blue, &.green-black, &.green-red
+    {
+        .card-title, .card-type, .card-image img, .card-body {
+            background-color: color.change($artifact, $lightness: $cardUiLightness, $saturation: $cardUiSaturation);
+            border: 2px solid $artifact;
+        }
+    }
+    &.red-blue { background: linear-gradient(45deg, $redBg 0%, $blueBg 100%); }
+    &.red-green { background: linear-gradient(45deg, $redBg 0%, $greenBg 100%); }
+    &.red-white { background: linear-gradient(45deg, $redBg 0%, $whiteBg 100%); }
+    &.red-black { background: linear-gradient(45deg, $redBg 0%, $blackBg 100%); }
+
+    &.blue-red { background: linear-gradient(45deg, $blueBg 0%, $redBg 100%); }
+    &.blue-green { background: linear-gradient(45deg, $blueBg 0%, $greenBg 100%); }
+    &.blue-white { background: linear-gradient(45deg, $blueBg 0%, $whiteBg 100%); }
+    &.blue-black { background: linear-gradient(45deg, $blueBg 0%, $blackBg 100%); }
+
+    &.white-blue { background: linear-gradient(45deg, $whiteBg 0%, $blueBg 100%); }
+    &.white-red { background: linear-gradient(45deg, $whiteBg 0%, $redBg 100%); }
+    &.white-black { background: linear-gradient(45deg, $whiteBg 0%, $blackBg 100%); }
+    &.white-green { background: linear-gradient(45deg, $whiteBg 0%, $greenBg 100%); }
+
+    &.black-white { background: linear-gradient(45deg, $blackBg 0%, $whiteBg 100%); }
+    &.black-blue { background: linear-gradient(45deg, $blackBg 0%, $blueBg 100%); }
+    &.black-green { background: linear-gradient(45deg, $blackBg 0%, $greenBg 100%); }
+    &.black-red { background: linear-gradient(45deg, $blackBg 0%, $redBg 100%); }
+
+    &.green-white { background: linear-gradient(45deg, $greenBg 0%, $whiteBg 100%); }
+    &.green-blue { background: linear-gradient(45deg, $greenBg 0%, $blueBg 100%); }
+    &.green-black { background: linear-gradient(45deg, $greenBg 0%, $blackBg 100%); }
+    &.green-red { background: linear-gradient(45deg, $greenBg 0%, $redBg 100%); }
+
+    .card-title, .card-type {
+        margin: 4px 10px;
+        padding: 2px 5px;
+        border-radius: 5px;
+    }
+    .mana-cost, .card-set {
+        float: right;
+    }
+    .card-set {
+        i.ss {
+            font-size: 1.8em;
+        }
+        &.uncommon { color: rgb(117, 117, 117); }
+        &.rare { color: rgb(223, 168, 28); }
+        &.mythic { color: rgb(255, 145, 0); }
+    }
+    .card-image {
+        display: flex;
+        justify-content: center;
+    }
+    .card-body {
+        width: 300px;
+        height: 140px;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 0.8em;
+    }
+    .card-stats {
+        position: relative;
+        top: -28px;
+        right: 4px;
+        float: right;
+        padding: 3px 8px;
+        background-color: lightgrey;
+        border: 3px solid color.change(lightgrey, $blackness: 60%);
+        border-radius: 5px;
+    }
+}
