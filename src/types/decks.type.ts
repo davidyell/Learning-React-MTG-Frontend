@@ -1,3 +1,5 @@
+import type { CardRarity, CardColor } from '../card/card.meta'
+
 export type DeckList = {
   data: DeckListItem[]
 }
@@ -26,7 +28,7 @@ export type DeckListItem = {
 export type CardInDeck = {
   id: number,
   border_color: string,
-  color_identity: string,
+  color_identity: keyof typeof CardColor | string,
   color_indicator: string,
   colors: string,
   converted_mana_cost: number,
@@ -39,7 +41,7 @@ export type CardInDeck = {
   multiverseId: string,
   name: string,
   power: string,
-  rarity: string,
+  rarity: CardRarity,
   set_code: string,
   subtypes: string,
   supertypes: string,

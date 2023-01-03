@@ -1,9 +1,10 @@
 import Axios from 'axios'
-import type { DeckList, DeckListItem, ViewDeck } from '../../types/decks.type';
+import type { DeckList, ViewDeck } from '../../types/decks.type';
 
 const getDeck = async (deckId: number): Promise<ViewDeck> => {
   return await Axios.get<ViewDeck>('http://localhost:3001/api/decks/' + deckId)
     .then((response) => {
+      // TOOD: Normalize the color identity into an array of strings, with the types
       return response.data;
     })
     .catch((error) => {

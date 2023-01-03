@@ -1,3 +1,5 @@
+import { CardColor } from './card.meta'
+
 const colorToClass = (colorIdentity: string): string => {
   if (colorIdentity === null) {
     return 'artifact';
@@ -19,21 +21,13 @@ const colorToClass = (colorIdentity: string): string => {
   }
 }
 
-const letterToWord = (colorIdentity: string): string => {
-  switch (colorIdentity) {
-    case 'W':
-      return 'white'
-    case 'G':
-      return 'green'
-    case 'B':
-      return 'black'
-    case 'R':
-      return 'red'
-    case 'U':
-      return 'blue';
-    default:
-      return 'unknown'
+const letterToWord = (colorIdentity: keyof typeof CardColor | string): string => {
+  const index = Object.keys(CardColor).indexOf(colorIdentity)
+  if (index !== -1) {
+    return Object.values(CardColor)[index].toLocaleLowerCase()
   }
+
+  return 'unknown'
 }
 
 export default colorToClass

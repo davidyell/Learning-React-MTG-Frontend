@@ -1,8 +1,10 @@
+import type { CardRarity } from './card.meta'
+
 import 'keyrune/css/keyrune.min.css'
 
 type Props = {
   set: string;
-  rarity: string;
+  rarity: CardRarity;
 }
 
 const Set = (props: Props) => {

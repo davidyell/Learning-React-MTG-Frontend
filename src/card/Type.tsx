@@ -1,9 +1,10 @@
 import Set from './Set'
+import { CardRarity } from './card.meta'
 
 type Props = {
   type: string;
   set: string;
-  rarity: string;
+  rarity: CardRarity;
 }
 
 const Type = (props: Props) => {
