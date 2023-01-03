@@ -15,7 +15,7 @@ const UserAvatar = (props: Props) => {
 
   let playerFace;
   if (playerAvatarImage !== null) {
-    playerFace = <Avatar size='small' src={'http://localhost:3001/user-avatars/' + props.player.avatar} alt={playerName} />
+    playerFace = <Avatar size='small' src={`${process.env.API_URL}/user-avatars/${props.player.avatar}`} alt={playerName} />
   } else {
     const color = colors[Math.floor(Math.random() * colors.length)];
     playerFace = <Avatar size='small' className={color}>{playerName.charAt(0)}</Avatar>

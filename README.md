@@ -11,7 +11,9 @@ This is a project to learn to use React with Typescript to build a single page a
 
 ## Api back-end
 
-This project runs off an api creating in another learning project to learn Express.
+This project accesses an api created in another project to learn Express. You will need both setup and running.
+
+Information on how to setup the backend api can be found in the repository.
 
 https://github.com/davidyell/Learning-Express-MTG-Api
 
