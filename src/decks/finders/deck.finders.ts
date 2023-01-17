@@ -1,10 +1,13 @@
 import Axios from 'axios'
-import type { DeckList, ViewDeck } from '../../types/decks.type';
+import { CardColorIdentity } from '../../card/card.meta';
+import type { CardsInDeck, DeckList, ViewDeck } from '../../types/decks.type';
 
 const getDeck = async (deckId: number): Promise<ViewDeck> => {
   return await Axios.get<ViewDeck>('http://localhost:3001/api/decks/' + deckId)
     .then((response) => {
-      // TOOD: Normalize the color identity into an array of strings, with the types
+      // Normalize the color identity into an array of strings, with the types
+      response.data.data.cards_in_deck.forEach((value: CardsInDeck, index: number, array: CardsInDeck[]) => { value.meta.parsedColors = value.card.color_identity.split(',') as CardColorIdentity[] });
+
       return response.data;
     })
     .catch((error) => {

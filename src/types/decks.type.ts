@@ -1,4 +1,4 @@
-import type { CardRarity, CardColor } from '../card/card.meta'
+import type { CardRarity, CardColor, CardColorIdentity } from '../card/card.meta'
 
 export type DeckList = {
   data: DeckListItem[]
@@ -57,6 +57,7 @@ export type CardsInDeck = {
   meta: {
     quantity: number,
     is_sideboard: boolean;
+    parsedColors: CardColorIdentity[];
   }
 }
 

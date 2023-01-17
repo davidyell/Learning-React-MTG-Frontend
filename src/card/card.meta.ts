@@ -1,5 +1,3 @@
-export type Thingy = Record<CardColorIdentity, string>
-
 export const CardColor = {
   R: 'Red',
   W: 'White',
