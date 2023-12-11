@@ -8,7 +8,7 @@ interface Props {
 
 const Title = (props: Props): JSX.Element => {
   return (
-    <div className='card-title'>{props.title} {(props.manaCost != null) && <ManaCost manaCost={props.manaCost}></ManaCost>}</div>
+    <div className='card-title'>{props.title} {(props.manaCost !== undefined) && <ManaCost manaCost={props.manaCost}></ManaCost>}</div>
   )
 }
 
