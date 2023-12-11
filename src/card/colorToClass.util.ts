@@ -1,21 +1,21 @@
 const colorToClass = (colorIdentity: string): string => {
   if (colorIdentity === null) {
-    return 'artifact';
+    return 'artifact'
   }
 
-  if (colorIdentity.includes(',') === false) {
+  if (!colorIdentity.includes(',')) {
     return letterToWord(colorIdentity)
   } else {
-    const colors = colorIdentity.split(',');
-    let className = '';
+    const colors = colorIdentity.split(',')
+    let className = ''
     for (let i = 0; i < colors.length; i++) {
-      className = className + letterToWord(colors[i]);
+      className = className + letterToWord(colors[i])
       if (i !== colors.length - 1) {
-        className = className + '-';
+        className = className + '-'
       }
     }
 
-    return className;
+    return className
   }
 }
 
@@ -30,7 +30,7 @@ const letterToWord = (colorIdentity: string): string => {
     case 'R':
       return 'red'
     case 'U':
-      return 'blue';
+      return 'blue'
     default:
       return 'unknown'
   }

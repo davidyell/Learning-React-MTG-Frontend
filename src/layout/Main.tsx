@@ -2,15 +2,14 @@ import { Layout } from 'antd'
 import MainFooter from './Footer'
 import { Outlet } from 'react-router-dom'
 import Navigation from './Navigation'
+import React from 'react'
 
-import 'antd/dist/antd.css'
 import 'mana-font/css/mana.min.css'
 import './main.scss'
 
+const { Header, Content } = Layout
 
-const { Header, Content } = Layout;
-
-const MainLayout = () => {
+const MainLayout = (): JSX.Element => {
   return (
     <Layout>
       <Header>
@@ -25,4 +24,4 @@ const MainLayout = () => {
   )
 }
 
-export default MainLayout;
+export default MainLayout

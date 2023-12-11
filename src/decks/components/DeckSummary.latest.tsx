@@ -1,19 +1,21 @@
-import { DeckListItem } from '../../types/decks.type'
+import { type DeckListItem } from '../../types/decks.type'
 import { Typography } from 'antd'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import { Link } from 'react-router-dom'
 import DeckLastUpdated from './LastUpdated'
+import React from 'react'
+
 import './deckSummary.latest.scss'
 
-dayjs.extend(relativeTime);
+dayjs.extend(relativeTime)
 const { Title, Paragraph } = Typography
 
-type Props = {
-  deckItem: DeckListItem;
+interface Props {
+  deckItem: DeckListItem
 }
 
-const DeckSummaryRow = (props: Props) => {
+const DeckSummaryRow = (props: Props): JSX.Element => {
   return (
     <div className="deck-summary">
       <Link to={'/deck/' + props.deckItem.deck.id} title={props.deckItem.deck.name}>

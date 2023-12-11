@@ -3,16 +3,17 @@ import type { ViewDeck as ViewDeckType } from '../types/decks.type'
 import Card from '../card/Card'
 import { Typography } from 'antd'
 import UserAvatar from './components/UserAvatar'
+import React from 'react'
 
 import './viewDeck.scss'
 
 const { Title, Paragraph } = Typography
 
-const ViewDeck = (props: any) => {
-  const response = useLoaderData() as ViewDeckType;
+const ViewDeck = (): JSX.Element => {
+  const response = useLoaderData() as ViewDeckType
 
   // TODO: Organise cards into a deck and create cards for each quantity and the sidebar
-  const cards = response.data.cards_in_deck.map((cardInDeck) => <Card card={cardInDeck.card} key={cardInDeck.card.id}></Card>);
+  const cards = response.data.cards_in_deck.map((cardInDeck) => <Card card={cardInDeck.card} key={cardInDeck.card.id}></Card>)
 
   return (
     <>

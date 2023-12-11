@@ -1,10 +1,10 @@
 import React from 'react'
 import { Layout, Typography } from 'antd'
 
-const { Footer } = Layout;
-const { Paragraph } = Typography;
+const { Footer } = Layout
+const { Paragraph } = Typography
 
-const MainFooter = () => {
+const MainFooter = (): JSX.Element => {
   return (
     <Footer style={{ textAlign: 'center' }}>
       <Paragraph><i className="ms ms-u"></i> <i className="ms ms-w"></i> <i className="ms ms-g"></i> <i className="ms ms-b"></i> <i className="ms ms-r"></i></Paragraph>
@@ -15,4 +15,4 @@ const MainFooter = () => {
   )
 }
 
-export default MainFooter;
+export default MainFooter
