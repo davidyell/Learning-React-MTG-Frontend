@@ -3,14 +3,15 @@ import { Card, Typography, Button } from 'antd'
 import DeckLastUpdated from './LastUpdated'
 import { Link } from 'react-router-dom'
 import UserAvatar from './UserAvatar'
+import React from 'react'
 
 const { Paragraph } = Typography
 
-type Props = {
-  deckListItem: DeckListItem;
+interface Props {
+  deckListItem: DeckListItem
 }
 
-const DeckSummaryCard = (props: Props) => {
+const DeckSummaryCard = (props: Props): JSX.Element => {
   const playerFace = <UserAvatar player={props.deckListItem.player} />
 
   return (

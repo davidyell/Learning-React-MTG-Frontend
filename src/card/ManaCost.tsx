@@ -1,13 +1,15 @@
+import React from 'react'
+
 import 'mana-font/css/mana.min.css'
 
-type Props = {
-  manaCost: string;
+interface Props {
+  manaCost: string
 }
 
-const ManaCost = (props: Props) => {
-  let symbols;
-  if (props.manaCost) {
-    const cleanCost = props.manaCost.replace(/[{}]+/g, '').split('');
+const ManaCost = (props: Props): JSX.Element => {
+  let symbols
+  if (props.manaCost !== '') {
+    const cleanCost = props.manaCost.replace(/[{}]+/g, '').split('')
     symbols = cleanCost.map((symbol, i) => <i className={`ms ms-cost ms-${symbol.toLowerCase()}`} key={i}></i>)
   }
 
@@ -16,4 +18,4 @@ const ManaCost = (props: Props) => {
   )
 }
 
-export default ManaCost;
+export default ManaCost

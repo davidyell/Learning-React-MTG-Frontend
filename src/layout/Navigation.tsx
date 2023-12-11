@@ -1,7 +1,8 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Menu } from 'antd'
+import React from 'react'
 
-const Navigation = () => {
+const Navigation = (): JSX.Element => {
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -16,11 +17,11 @@ const Navigation = () => {
       activeKey={activeKey()}
       selectedKeys={[activeKey()]}
       items={[
-        { key: 'home', label: 'Home', onClick: () => navigate('/') },
-        { key: 'decks', label: 'Decks', onClick: () => navigate('/decks') },
+        { key: 'home', label: 'Home', onClick: () => { navigate('/') } },
+        { key: 'decks', label: 'Decks', onClick: () => { navigate('/decks') } }
       ]}
     />
   )
 }
 
-export default Navigation;
+export default Navigation

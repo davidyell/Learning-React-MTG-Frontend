@@ -1,15 +1,16 @@
 import { Typography } from 'antd'
 import reactStringReplace from 'react-string-replace'
+import React from 'react'
 
 const { Paragraph } = Typography
 
-type Props = {
-  text: string;
-  flavorName: string;
-  flavorText: string;
+interface Props {
+  text: string
+  flavorName: string
+  flavorText: string
 }
 
-const Body = (props: Props) => {
+const Body = (props: Props): JSX.Element => {
   let bodyText
 
   bodyText = reactStringReplace(props.text, '{T}', (match, i) => (
@@ -21,8 +22,8 @@ const Body = (props: Props) => {
 
   return <div className="card-body">
     <p>{bodyText}</p>
-    {props.flavorText && <><hr /><Paragraph italic={true}>{props.flavorText}</Paragraph></>}
+    {(props.flavorText !== '') && <><hr /><Paragraph italic={true}>{props.flavorText}</Paragraph></>}
   </div>
 }
 
-export default Body;
+export default Body

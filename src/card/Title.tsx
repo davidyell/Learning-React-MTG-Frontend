@@ -1,14 +1,15 @@
 import ManaCost from './ManaCost'
+import React from 'react'
 
-type Props = {
-  title: string;
-  manaCost?: string;
+interface Props {
+  title: string
+  manaCost?: string
 }
 
-const Title = (props: Props) => {
+const Title = (props: Props): JSX.Element => {
   return (
-    <div className='card-title'>{props.title} {props.manaCost && <ManaCost manaCost={props.manaCost}></ManaCost>}</div>
+    <div className='card-title'>{props.title} {(props.manaCost != null) && <ManaCost manaCost={props.manaCost}></ManaCost>}</div>
   )
 }
 
-export default Title;
+export default Title

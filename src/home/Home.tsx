@@ -1,13 +1,14 @@
 import { Typography, Col, Row } from 'antd'
 import LatestDecks from '../decks/components/LatestDecks'
 import ContentBlock from './ContentBlock'
+import React from 'react'
 
 import 'antd/dist/antd.css'
 import 'mana-font/css/mana.min.css'
 
-const { Title } = Typography;
+const { Title } = Typography
 
-const Home = () => {
+const Home = (): JSX.Element => {
   return (
     <Row>
       <Col span={16}>
@@ -30,4 +31,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default Home

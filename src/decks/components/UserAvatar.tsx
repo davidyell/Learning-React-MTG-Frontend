@@ -1,23 +1,24 @@
 import { Avatar } from 'antd'
 import type { Player } from '../../types/decks.type'
+import React from 'react'
 
 import './userAvatar.scss'
 
-type Props = {
+interface Props {
   player: Player
 }
 
 const colors = ['red', 'green', 'blue', 'black', 'white']
 
-const UserAvatar = (props: Props) => {
+const UserAvatar = (props: Props): JSX.Element => {
   const playerAvatarImage = props.player.avatar
   const playerName = props.player.first_name + ' ' + props.player.last_name
 
-  let playerFace;
+  let playerFace
   if (playerAvatarImage !== null) {
-    playerFace = <Avatar size='small' src={`${process.env.API_URL}/user-avatars/${props.player.avatar}`} alt={playerName} />
+    playerFace = <Avatar size='small' src={`http://localhost:3001/user-avatars/${props.player.avatar}`} alt={playerName} />
   } else {
-    const color = colors[Math.floor(Math.random() * colors.length)];
+    const color = colors[Math.floor(Math.random() * colors.length)]
     playerFace = <Avatar size='small' className={color}>{playerName.charAt(0)}</Avatar>
   }
 
